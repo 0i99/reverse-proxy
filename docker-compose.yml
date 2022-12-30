@@ -1,0 +1,35 @@
+version: '3.2'
+services:
+  mock:
+    image: mockserver/mockserver:5.14.0
+    container_name: mock
+    volumes:
+      - ./mock:/config
+    environment:
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/init.json
+      MOCKSERVER_PROPERTY_FILE: /config/mockserver.properties
+    ports:
+      - 8051:1080
+  mock2:
+    image: mockserver/mockserver:5.14.0
+    container_name: mock2
+    volumes:
+      - ./mock:/config
+    environment:
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/init2.json
+      MOCKSERVER_PROPERTY_FILE: /config/mockserver.properties
+    ports:
+      - 8052:1080     
+
+  proxy:
+    image: proxy
+    container_name: proxy
+    build: ./proxy
+    ports:
+      - 8090:8090
+    environment:
+      PROXY_TO: http://mock:1080
+    depends_on:
+      - mock
+      - mock2
+  

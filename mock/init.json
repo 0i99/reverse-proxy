@@ -1,0 +1,14 @@
+[
+    {
+      "httpRequest": {
+        "path": "/info"
+      },
+      "httpResponse": {
+        "body": {
+            "name": "something",
+            "details":[ "some","data","mock"]
+        }
+      }
+    }
+   
+  ]

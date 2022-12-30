@@ -1,0 +1,10 @@
+@startuml
+[browser]
+[proxy:8090] as proxy
+[mock:8051] as mock
+[mock2:8052] as mock2
+
+browser -right-> proxy
+proxy --> mock : proxy based on\nenvironment variable PROXY_TO\nsee docker-compose file
+proxy --> mock2
+@enduml
