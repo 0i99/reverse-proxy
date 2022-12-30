@@ -1,6 +1,6 @@
 # About
 
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://github.com/0i99/reverse-proxy/blob/main/about.puml)
+![about](http://www.plantuml.com/plantuml/png/NO_1QeD0443l-nNp0mjseT1wAFw1fVJGeX9MdPWbxepChYRv-wn6SiXbu3rc7amHefKu-r5LhV0be3IgceIlj_mZ-ymQi04sL9Ndxfpa-zicLteuiqhpb4QflGHQt72A-cilR1DqudKFSX2UewC1MXkm1wQQa1OdJ1ufmcB5sNP4-Fuf__uFlsLD0H7wT8kYE_OJ1uIZ6_6bR5I1rAUVxW00)
 
 
 # Run and test
