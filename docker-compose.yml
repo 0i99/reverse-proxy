@@ -28,7 +28,7 @@ services:
     ports:
       - 8090:8090
     environment:
-      PROXY_TO: http://mock:1080
+      PROXY_TO: http://mock2:1080
     depends_on:
       - mock
       - mock2

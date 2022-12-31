@@ -1,11 +1,8 @@
-FROM nginx:1.14.0-alpine
+FROM nginx:stable-alpine
 
-RUN apk --no-cache add \
-      python2 \
-      py2-pip && \
-      pip2 install j2cli[yaml]
- 
-RUN apk add --update bash
+RUN apk update -q \
+      && apk --no-cache add python3 py3-pip bash \
+      && pip install j2cli[yaml]
 
 # using environment so j2 required
 COPY nginx.conf.j2 /templates/
